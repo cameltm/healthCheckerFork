@@ -62,7 +62,7 @@ class CheckHealth {
 		while(true) {
 			
 			mainTask = new PingAction(servers, 0, servers.size(), TIMEOUT);
-			System.out.printf( "%s - New session srarted (domains %d)%n", LocalDateTime.now().format(FORMATTER), servers.size() );
+			System.out.printf( "%s - New session started (domains %d)%n", LocalDateTime.now().format(FORMATTER), servers.size() );
 			pool.invoke(mainTask);
 			System.out.printf(
 				"%s - All servers checked. Will wait for %d seconds until next round%n",
